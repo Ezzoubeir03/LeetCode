@@ -3,6 +3,7 @@
  * @return {number[][]}
  */
 var generate = function(numRows) {
+//Pascal's Triangle
     triangle = [];
     for(let i = 0; i < numRows; i++){
     triangle[i] = [1];
