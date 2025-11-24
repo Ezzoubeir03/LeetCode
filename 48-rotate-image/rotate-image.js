@@ -15,5 +15,5 @@ var rotate = function(matrix) {
    
     }
 
-    //return matrix;
+    return matrix;
 };
