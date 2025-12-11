@@ -3,16 +3,12 @@
  * @return {number}
  */
 var singleNumber = function(nums) {
-    ////our goal to find the single number in the array :
-    for(let i = 0 ; i <= nums.length; i++){
-        let count = 0;
-    for(let j = 0; j <= nums.length; j++){
-        if(nums[i] === nums[j]){
-            count++;
-        }
+    //single Number :
+    //non-empty array:
+    ///the out put is the single element that only exist in the array :
+    let result = 0;
+    for(let num of nums){
+    result ^= num;
     }
-    if(count === 1){
-        return nums[i];
-       }
-    } 
+    return result;
 };
