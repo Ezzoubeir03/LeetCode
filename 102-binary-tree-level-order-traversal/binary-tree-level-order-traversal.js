@@ -11,22 +11,24 @@
  * @return {number[][]}
  */
 var levelOrder = function(root) {
-    //Binary Tree Level Order Traversal:
-    if(root === null) return [];
-    let res = [];
-    let queue = [root];
-    while (queue.length){
-        let level = [];
-        let levelSize = queue.length;
-         while(levelSize){
-            let current = queue.shift();
+     if (!root) return [];
+     const result = [];
+     const queue = [root];
 
-            if(current.left) queue.push(current.left);
-            if(current.right) queue.push(current.right);
-            level.push(current.val);
-            levelSize--;
-         }
-      res.push(level);
-    }
- return res;
-};
+    while(queue.length > 0){
+       const levelSize = queue.length;
+       const current = [];
+
+       for(let i = 0; i < levelSize; i++){
+        const node = queue.shift();
+        current.push(node.val);
+
+        if(node.left) queue.push(node.left);
+        if(node.right) queue.push(node.right);
+       }
+       
+       result.push(current);
+}
+return result;
+
+     };
