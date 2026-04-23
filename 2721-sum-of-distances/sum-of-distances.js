@@ -45,7 +45,7 @@ var distance = function(nums) {
         for(let i = 0; i < m; i++){
             const pos = p[i];
 
-            const left = pos * i -(i > 0 ? prefix[i -1] : 0);
+            const left = pos * i -(i > 0 ? prefix[i -1] : 0); ////The index starting from 0 that why i did prefix[i -1]
 
             const right = (prefix[m -1]- prefix[i]) - pos * (m - i - 1);
             res[pos] = left + right;
