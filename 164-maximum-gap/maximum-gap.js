@@ -5,7 +5,7 @@
 var maximumGap = function(nums) {
     ///Maximum Gap:
 
-    if(nums.length < 2){
+    if(nums.length <= 1){
         return 0;
     }
     const sorted = [...nums].sort((a,b) => a- b); 
