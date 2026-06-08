@@ -10,16 +10,14 @@ var pivotArray = function(nums, pivot) {
     let equal = [];
     let right = [];
 
-    for(let i = 0; i < nums.length; i++){
-        let num = nums[i];
-    {
+     for(let num of nums){
         if(num < pivot){
             left.push(num);
         } else if(num === pivot){
             equal.push(num);
         } else {
             right.push(num);
-        }
+        
        }
     }
      
